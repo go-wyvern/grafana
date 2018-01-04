@@ -21,6 +21,7 @@
   },
 
   "annotations": true,
+  "alerting": true,
   "metrics": true,
 
   "queryOptions": {
