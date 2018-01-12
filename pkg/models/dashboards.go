@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/go-wyvern/grafana/pkg/components/simplejson"
 	"github.com/gosimple/slug"
-	"github.com/grafana/grafana/pkg/components/simplejson"
 )
 
 // Typed errors

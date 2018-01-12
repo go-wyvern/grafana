@@ -8,11 +8,11 @@ import (
 	"testing"
 
 	"github.com/go-macaron/session"
-	"github.com/grafana/grafana/pkg/bus"
-	l "github.com/grafana/grafana/pkg/login"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/go-wyvern/grafana/pkg/bus"
+	l "github.com/go-wyvern/grafana/pkg/login"
+	m "github.com/go-wyvern/grafana/pkg/models"
+	"github.com/go-wyvern/grafana/pkg/setting"
+	"github.com/go-wyvern/grafana/pkg/util"
 	. "github.com/smartystreets/goconvey/convey"
 	"gopkg.in/macaron.v1"
 )

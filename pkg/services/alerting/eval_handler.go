@@ -5,9 +5,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana/pkg/log"
-	"github.com/grafana/grafana/pkg/metrics"
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/go-wyvern/grafana/pkg/log"
+	"github.com/go-wyvern/grafana/pkg/metrics"
+	"github.com/go-wyvern/grafana/pkg/models"
 )
 
 type DefaultEvalHandler struct {

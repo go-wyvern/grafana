@@ -4,8 +4,8 @@ import (
 	"time"
 
 	"github.com/go-xorm/xorm"
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/log"
+	"github.com/go-wyvern/grafana/pkg/bus"
+	"github.com/go-wyvern/grafana/pkg/log"
 	sqlite3 "github.com/mattn/go-sqlite3"
 )
 

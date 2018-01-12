@@ -5,9 +5,9 @@
 #
 
 GOPATH=/go
-REPO_PATH=$GOPATH/src/github.com/grafana/grafana
+REPO_PATH=$GOPATH/src/github.com/go-wyvern/grafana
 
-cd /go/src/github.com/grafana/grafana
+cd /go/src/github.com/go-wyvern/grafana
 echo "current dir: $(pwd)"
 
 if [ "$CIRCLE_TAG" != "" ]; then

@@ -3,13 +3,13 @@ package api
 import (
 	"time"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/metrics"
-	"github.com/grafana/grafana/pkg/middleware"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/go-wyvern/grafana/pkg/api/dtos"
+	"github.com/go-wyvern/grafana/pkg/bus"
+	"github.com/go-wyvern/grafana/pkg/metrics"
+	"github.com/go-wyvern/grafana/pkg/middleware"
+	m "github.com/go-wyvern/grafana/pkg/models"
+	"github.com/go-wyvern/grafana/pkg/setting"
+	"github.com/go-wyvern/grafana/pkg/util"
 )
 
 func GetSharingOptions(c *middleware.Context) {

@@ -3,9 +3,9 @@ package conditions
 import (
 	"encoding/json"
 
-	"github.com/grafana/grafana/pkg/components/null"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/services/alerting"
+	"github.com/go-wyvern/grafana/pkg/components/null"
+	"github.com/go-wyvern/grafana/pkg/components/simplejson"
+	"github.com/go-wyvern/grafana/pkg/services/alerting"
 )
 
 var (

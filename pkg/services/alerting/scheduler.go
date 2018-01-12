@@ -3,8 +3,8 @@ package alerting
 import (
 	"time"
 
-	"github.com/grafana/grafana/pkg/log"
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/go-wyvern/grafana/pkg/log"
+	"github.com/go-wyvern/grafana/pkg/models"
 )
 
 type SchedulerImpl struct {

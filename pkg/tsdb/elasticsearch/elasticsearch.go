@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana/pkg/log"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/tsdb"
+	"github.com/go-wyvern/grafana/pkg/log"
+	"github.com/go-wyvern/grafana/pkg/models"
+	"github.com/go-wyvern/grafana/pkg/tsdb"
 
 	"github.com/leibowitz/moment"
 )

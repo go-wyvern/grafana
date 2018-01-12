@@ -1,6 +1,6 @@
 package alerting
 
-import "github.com/grafana/grafana/pkg/components/null"
+import "github.com/go-wyvern/grafana/pkg/components/null"
 
 type Job struct {
 	Offset     int64

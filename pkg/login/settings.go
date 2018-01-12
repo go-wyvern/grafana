@@ -5,9 +5,9 @@ import (
 	"os"
 
 	"github.com/BurntSushi/toml"
-	"github.com/grafana/grafana/pkg/log"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/go-wyvern/grafana/pkg/log"
+	m "github.com/go-wyvern/grafana/pkg/models"
+	"github.com/go-wyvern/grafana/pkg/setting"
 )
 
 type LdapConfig struct {

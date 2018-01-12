@@ -6,7 +6,7 @@ import (
 
 	"strings"
 
-	"github.com/grafana/grafana/pkg/tsdb"
+	"github.com/go-wyvern/grafana/pkg/tsdb"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

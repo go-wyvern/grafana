@@ -3,10 +3,11 @@ package imguploader
 import (
 	"context"
 	"fmt"
-	"github.com/grafana/grafana/pkg/log"
 	"regexp"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/go-wyvern/grafana/pkg/log"
+
+	"github.com/go-wyvern/grafana/pkg/setting"
 )
 
 type ImageUploader interface {

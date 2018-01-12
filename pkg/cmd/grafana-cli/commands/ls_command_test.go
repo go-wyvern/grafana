@@ -2,10 +2,11 @@ package commands
 
 import (
 	"errors"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/commands/commandstest"
-	s "github.com/grafana/grafana/pkg/cmd/grafana-cli/services"
-	. "github.com/smartystreets/goconvey/convey"
 	"testing"
+
+	"github.com/go-wyvern/grafana/pkg/cmd/grafana-cli/commands/commandstest"
+	s "github.com/go-wyvern/grafana/pkg/cmd/grafana-cli/services"
+	. "github.com/smartystreets/goconvey/convey"
 )
 
 func TestMissingPath(t *testing.T) {

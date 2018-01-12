@@ -10,7 +10,7 @@ function exit_if_fail {
     fi
 }
 
-cd /home/ubuntu/.go_workspace/src/github.com/grafana/grafana
+cd /home/ubuntu/.go_workspace/src/github.com/go-wyvern/grafana
 
 rm -rf node_modules
 npm install -g yarn --quiet

@@ -3,7 +3,7 @@ package models
 import (
 	"time"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
+	"github.com/go-wyvern/grafana/pkg/components/simplejson"
 )
 
 type AlertNotification struct {

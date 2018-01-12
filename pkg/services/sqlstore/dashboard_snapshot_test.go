@@ -5,8 +5,8 @@ import (
 
 	. "github.com/smartystreets/goconvey/convey"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	m "github.com/grafana/grafana/pkg/models"
+	"github.com/go-wyvern/grafana/pkg/components/simplejson"
+	m "github.com/go-wyvern/grafana/pkg/models"
 )
 
 func TestDashboardSnapshotDBAccess(t *testing.T) {

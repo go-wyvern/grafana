@@ -1,4 +1,4 @@
-[Grafana](https://grafana.com) [![Circle CI](https://circleci.com/gh/grafana/grafana.svg?style=svg)](https://circleci.com/gh/grafana/grafana) [![Go Report Card](https://goreportcard.com/badge/github.com/grafana/grafana)](https://goreportcard.com/report/github.com/grafana/grafana) [![codecov](https://codecov.io/gh/grafana/grafana/branch/master/graph/badge.svg)](https://codecov.io/gh/grafana/grafana)
+[Grafana](https://grafana.com) [![Circle CI](https://circleci.com/gh/grafana/grafana.svg?style=svg)](https://circleci.com/gh/grafana/grafana) [![Go Report Card](https://goreportcard.com/badge/github.com/go-wyvern/grafana)](https://goreportcard.com/report/github.com/go-wyvern/grafana) [![codecov](https://codecov.io/gh/grafana/grafana/branch/master/graph/badge.svg)](https://codecov.io/gh/grafana/grafana)
 ================
 [Website](https://grafana.com) |
 [Twitter](https://twitter.com/grafana) |
@@ -32,8 +32,8 @@ the latest master builds [here](https://grafana.com/grafana/download)
 
 ### Building the backend
 ```bash
-go get github.com/grafana/grafana
-cd ~/go/src/github.com/grafana/grafana
+go get github.com/go-wyvern/grafana
+cd ~/go/src/github.com/go-wyvern/grafana
 go run build.go setup
 go run build.go build
 ```
@@ -106,7 +106,7 @@ the kickass metrics & devops dashboard we all dream about!
 
 ## Plugin development
 
-Checkout the [Plugin Development Guide](http://docs.grafana.org/plugins/developing/development/) and checkout the [PLUGIN_DEV.md](https://github.com/grafana/grafana/blob/master/PLUGIN_DEV.md) file for changes in Grafana that relate to
+Checkout the [Plugin Development Guide](http://docs.grafana.org/plugins/developing/development/) and checkout the [PLUGIN_DEV.md](https://github.com/go-wyvern/grafana/blob/master/PLUGIN_DEV.md) file for changes in Grafana that relate to
 plugin development.
 
 ## License

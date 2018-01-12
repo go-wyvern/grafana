@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/components/null"
-	"github.com/grafana/grafana/pkg/tsdb"
+	"github.com/go-wyvern/grafana/pkg/components/null"
+	"github.com/go-wyvern/grafana/pkg/tsdb"
 )
 
 func joinMaps(left map[string]tsdb.TimeSeriesPoints, right map[string]tsdb.TimeSeriesPoints) map[string]tsdb.TimeSeriesPoints {

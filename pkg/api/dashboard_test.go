@@ -8,14 +8,14 @@ import (
 	macaron "gopkg.in/macaron.v1"
 
 	"github.com/go-macaron/session"
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/middleware"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/alerting"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/go-wyvern/grafana/pkg/api/dtos"
+	"github.com/go-wyvern/grafana/pkg/bus"
+	"github.com/go-wyvern/grafana/pkg/components/simplejson"
+	"github.com/go-wyvern/grafana/pkg/middleware"
+	m "github.com/go-wyvern/grafana/pkg/models"
+	"github.com/go-wyvern/grafana/pkg/services/alerting"
+	"github.com/go-wyvern/grafana/pkg/services/dashboards"
+	"github.com/go-wyvern/grafana/pkg/setting"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

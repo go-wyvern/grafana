@@ -3,9 +3,10 @@ package commands
 import (
 	"errors"
 	"fmt"
-	m "github.com/grafana/grafana/pkg/cmd/grafana-cli/models"
-	services "github.com/grafana/grafana/pkg/cmd/grafana-cli/services"
 	"strings"
+
+	m "github.com/go-wyvern/grafana/pkg/cmd/grafana-cli/models"
+	services "github.com/go-wyvern/grafana/pkg/cmd/grafana-cli/services"
 )
 
 var getPluginss func(path string) []m.InstalledPlugin = services.GetLocalPlugins

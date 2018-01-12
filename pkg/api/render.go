@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/components/renderer"
-	"github.com/grafana/grafana/pkg/middleware"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/go-wyvern/grafana/pkg/components/renderer"
+	"github.com/go-wyvern/grafana/pkg/middleware"
+	"github.com/go-wyvern/grafana/pkg/util"
 )
 
 func RenderToPng(c *middleware.Context) {

@@ -21,7 +21,7 @@ func main() {
 	app.Name = "Grafana cli"
 	app.Usage = ""
 	app.Author = "Grafana Project"
-	app.Email = "https://github.com/grafana/grafana"
+	app.Email = "https://github.com/go-wyvern/grafana"
 	app.Version = version
 	app.Flags = []cli.Flag{
 		cli.StringFlag{

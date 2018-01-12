@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"strings"
 
-	m "github.com/grafana/grafana/pkg/models"
+	m "github.com/go-wyvern/grafana/pkg/models"
 )
 
 // SearchBuilder is a builder/object mother that builds a dashboard search query
