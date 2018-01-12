@@ -14,8 +14,10 @@ type Rule struct {
 	Id                  int64
 	OrgId               int64
 	DashboardId         int64
+	DataSourceId        int64
 	PanelId             int64
 	Frequency           int64
+	Query               string
 	Name                string
 	Message             string
 	NoDataState         m.NoDataOption
@@ -122,6 +124,8 @@ func NewRuleFromDBAlert(ruleDef *m.Alert) (*Rule, error) {
 				model.Conditions = append(model.Conditions, queryCondition)
 			}
 		}
+		model.DataSourceId = conditionModel.Get("query").Get("datasourceId").MustInt64()
+		model.Query = conditionModel.Get("query").Get("model").Get("query").MustString()
 	}
 
 	if len(model.Conditions) == 0 {

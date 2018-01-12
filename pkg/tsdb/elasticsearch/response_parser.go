@@ -50,7 +50,6 @@ func parseSubQueryResults(parentAggregationKey string, bucketlist BucketList, pr
 					if err == nil {
 						valueRow[1] = parseValue(keyf)
 					}
-					metricKey = metricKey + value.(string)
 				}
 			case float64:
 				if key == "key" {
@@ -58,34 +57,6 @@ func parseSubQueryResults(parentAggregationKey string, bucketlist BucketList, pr
 				}
 				if key == "doc_count" {
 					valueRow[0] = parseValue(value.(float64))
-				}
-			case map[string]interface{}:
-				valueMap := value.(map[string]interface{})
-				if valueMap["value"] != nil {
-					metricKey = key
-					valueRow[0] = parseValue(valueMap["value"].(float64))
-				} else if valueMap["buckets"] != nil {
-					buckets := Bucket{}
-
-					bucketBytes, err := json.Marshal(valueMap["buckets"])
-					if err != nil {
-						return timeSeries, err
-					}
-
-					err = json.Unmarshal(bucketBytes, &buckets)
-					if err != nil {
-						return timeSeries, err
-					}
-
-					nestedBucketList := BucketList{
-						Buckets: buckets,
-					}
-					nestedTimeSeries, err := parseSubQueryResults(fmt.Sprintf("%s%s", parentAggregationKey, key), nestedBucketList, preferredNames, resultFilter)
-					if err != nil {
-						return timeSeries, err
-					}
-
-					timeSeries = joinMaps(timeSeries, nestedTimeSeries)
 				}
 			default:
 				fmt.Printf("Unknown Type: %v %v\n", key, value)

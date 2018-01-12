@@ -49,6 +49,26 @@ type StateDescription struct {
 	Data  string
 }
 
+func (c *EvalContext) GetDataSource() (*m.DataSource, error) {
+	getDsInfo := &m.GetDataSourceByIdQuery{
+		Id:    c.Rule.DataSourceId,
+		OrgId: c.Rule.OrgId,
+	}
+
+	if err := bus.Dispatch(getDsInfo); err != nil {
+		return nil, fmt.Errorf("Could not find datasource %v", err)
+	}
+	return getDsInfo.Result, nil
+}
+
+func (c *EvalContext) GetDashboard() (*m.Dashboard, error) {
+	query := m.GetDashboardQuery{Id: c.Rule.DashboardId, OrgId: c.Rule.OrgId}
+	if err := bus.Dispatch(&query); err != nil {
+		return nil, fmt.Errorf("Could not find dashboard %v", err)
+	}
+	return query.Result, nil
+}
+
 func (c *EvalContext) GetStateModel() *StateDescription {
 	switch c.Rule.State {
 	case m.AlertStateOK:

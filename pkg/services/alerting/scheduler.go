@@ -1,7 +1,6 @@
 package alerting
 
 import (
-	"math"
 	"time"
 
 	"github.com/grafana/grafana/pkg/log"
@@ -25,7 +24,7 @@ func (s *SchedulerImpl) Update(rules []*Rule) {
 
 	jobs := make(map[int64]*Job, 0)
 
-	for i, rule := range rules {
+	for _, rule := range rules {
 		var job *Job
 		if s.jobs[rule.Id] != nil {
 			job = s.jobs[rule.Id]
@@ -36,12 +35,13 @@ func (s *SchedulerImpl) Update(rules []*Rule) {
 		}
 
 		job.Rule = rule
+		job.Offset = rule.Id
 
-		offset := ((rule.Frequency * 1000) / int64(len(rules))) * int64(i)
-		job.Offset = int64(math.Floor(float64(offset) / 1000))
-		if job.Offset == 0 { //zero offset causes division with 0 panics.
-			job.Offset = 1
-		}
+		// offset := ((rule.Frequency * 1000) / int64(len(rules))) * int64(i)
+		// job.Offset = int64(math.Floor(float64(offset) / 1000))
+		// if job.Offset == 0 { //zero offset causes division with 0 panics.
+		// 	job.Offset = 1
+		// }
 		jobs[rule.Id] = job
 	}
 
@@ -56,18 +56,14 @@ func (s *SchedulerImpl) Tick(tickTime time.Time, execQueue chan *Job) {
 			continue
 		}
 
-		if job.OffsetWait && now%job.Offset == 0 {
-			job.OffsetWait = false
-			s.enque(job, execQueue)
-			continue
-		}
+		// if job.OffsetWait && now%job.Offset == 0 {
+		// 	job.OffsetWait = false
+		// 	s.enque(job, execQueue)
+		// 	continue
+		// }
 
-		if now%job.Rule.Frequency == 0 {
-			if job.Offset > 0 {
-				job.OffsetWait = true
-			} else {
-				s.enque(job, execQueue)
-			}
+		if (now-job.Offset)%job.Rule.Frequency == 0 {
+			s.enque(job, execQueue)
 		}
 	}
 }

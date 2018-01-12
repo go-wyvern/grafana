@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/grafana/grafana/pkg/components/simplejson"
+	"github.com/grafana/grafana/pkg/log"
 	"github.com/grafana/grafana/pkg/tsdb"
 
 	"text/template"
@@ -46,7 +47,7 @@ var queryTemplate = `
 
 func convertTimeToUnixNano(rangeTime string, now time.Time) string {
 	if rangeTime == "now" {
-		rangeTime = "30s"
+		rangeTime = "0s"
 	}
 
 	duration, err := time.ParseDuration(fmt.Sprintf("-%s", rangeTime))
@@ -60,6 +61,8 @@ func convertTimeToUnixNano(rangeTime string, now time.Time) string {
 func formatTimeRange(data TemplateQueryModel) string {
 	to := convertTimeToUnixNano(data.TimeRange.To, data.TimeRange.Now)
 	from := convertTimeToUnixNano(data.TimeRange.From, data.TimeRange.Now)
+
+	log.Info(from + " " + to)
 
 	return fmt.Sprintf(`
 		{

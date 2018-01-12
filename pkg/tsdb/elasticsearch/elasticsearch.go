@@ -121,6 +121,7 @@ func (e *EsExecutor) buildRequest(queryInfo *tsdb.Query, timeRange *tsdb.TimeRan
 	if err != nil {
 		return nil, err
 	}
+	log.Info(esRequestModel.Query)
 
 	esRequestJSON, err := esRequestModel.buildQueryJSON(timeRange)
 	if err != nil {
