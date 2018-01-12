@@ -7,7 +7,7 @@ import (
 	"github.com/go-wyvern/grafana/pkg/log"
 	"github.com/go-xorm/xorm"
 	_ "github.com/lib/pq"
-	_ "github.com/mattn/go-sqlite3"
+	// _ "github.com/mattn/go-sqlite3"
 )
 
 type Migrator struct {
